@@ -1,0 +1,10 @@
+[
+  {
+    "url": "http://www.google.com",
+    "interval": 20
+  },
+  {
+    "url": "http://www.yahoo.com",
+    "interval": 10
+  }
+]
