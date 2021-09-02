@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY . /app
 
-RUN go mod download
 RUN go build -o build-dir/http_monitor.bin
 
 FROM golang:1.16-alpine as RUN

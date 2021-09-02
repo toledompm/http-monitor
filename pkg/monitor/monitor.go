@@ -24,6 +24,9 @@ type MonitorConfig struct {
 	Interval int `json:"interval"`
 }
 
+// Monitor is the main struct for the monitor package.
+// It sends out requests to the provided urls at the provided interval.
+// It uses the Logger and Benchmark interfaces to log and measure the response time of a url.
 type Monitor struct {
 	Logger    Logger
 	Benchmark Benchmark
