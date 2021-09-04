@@ -50,13 +50,12 @@ docker build . --tag http-monitor
 docker run --rm http-monitor
 ```
 
-You should see some logs matching: `[URL]: [Status Code], in [Request Time]`. Example:
+You should see some logs matching: `[URL]: [Status Code] - [Request Time]`. Followed by a break down of the total request time. Example:
 
 ```bash
-[INFO] http://www.google.com: 200 OK, in 203.559672ms
-[INFO] http://www.yahoo.com: 200 OK, in 1.142937649s
-[INFO] http://www.yahoo.com: 200 OK, in 792.987539ms
-[INFO] http://www.google.com: 200 OK, in 185.066743ms
-[INFO] http://www.yahoo.com: 200 OK, in 816.863777ms
-[INFO] http://www.yahoo.com: 200 OK, in 852.272979ms
+[INFO] https://www.yahoo.com: 200 OK - 637.766229ms
+DNS Lookup: 37.76337ms
+Connection: 165.026824ms
+TLS Handshake: 168.809246ms
+Time to first byte: 637.608928ms
 ```

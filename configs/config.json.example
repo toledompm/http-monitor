@@ -1,10 +1,10 @@
 [
   {
-    "url": "http://www.google.com",
+    "url": "https://www.google.com",
     "interval": 20
   },
   {
-    "url": "http://www.yahoo.com",
+    "url": "https://www.yahoo.com",
     "interval": 10
   }
 ]
