@@ -7,10 +7,10 @@ import (
 	"github.com/toledompm/http_monitor/pkg/jsonutil"
 )
 
-func ReadConfig() ([]monitor.MonitorConfig, error) {
+func ReadConfig(configFilePath string) ([]monitor.MonitorConfig, error) {
 	var configs []monitor.MonitorConfig
 
-	jsonByteData, err := jsonutil.OpenJsonFile("configs/config.json")
+	jsonByteData, err := jsonutil.OpenJsonFile(configFilePath)
 
 	if err != nil {
 		return nil, err

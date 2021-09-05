@@ -33,7 +33,7 @@ go build -o http_monitor.bin
 3 - Run it!:
 
 ```bash
-./http_monitor.bin
+./http_monitor.bin ./configs/config
 ```
 
 #### Docker Setup:
@@ -47,7 +47,7 @@ docker build . --tag http-monitor
 3 - Run it!:
 
 ```bash
-docker run --rm http-monitor
+docker run --rm -v /absolute/path/to/config.json:/app/config.json http-monitor
 ```
 
 You should see some logs matching: `[URL]: [Status Code] - [Request Time]`. Followed by a break down of the total request time. Example:
