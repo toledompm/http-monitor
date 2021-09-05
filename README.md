@@ -41,7 +41,7 @@ go build -o http_monitor.bin
 3 - Run it!:
 
 ```bash
-./http_monitor.bin ./configs/config
+./http_monitor.bin ./configs/config.json
 ```
 
 #### Docker Setup:
