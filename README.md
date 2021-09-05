@@ -60,6 +60,8 @@ docker run --rm -v /absolute/path/to/config.json:/app/config.json http-monitor
 
 _you need to provide a configFile to the container at:/app/config.json_
 
+#### Output
+
 You should see some logs matching: `[URL]: [Status Code] - [Request Time]`. Followed by a break down of the total request time. Example:
 
 ```bash
