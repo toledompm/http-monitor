@@ -1,6 +1,14 @@
 ## HTTP Monitor
 
-Micro golang app for monitoring http endpoints
+Micro golang app for monitoring http endpoints.
+
+http_monitor takes a path to a config file as the first argument, it proceeds to fetch the provided URLs, logging the response status code, as well as a breakdown of the request time.
+
+### Async processing
+
+Go routines allows for the monitor keep track of every provided url in the provided intervals, without beeing influenced by bad endpoints taking too long to respond.
+
+- `time.AfterFunc`: AfterFunc creates it's own go-routine after the provided time has passed, without holding up any processing, or beeing held up itself.
 
 ### Setup:
 
@@ -49,6 +57,8 @@ docker build . --tag http-monitor
 ```bash
 docker run --rm -v /absolute/path/to/config.json:/app/config.json http-monitor
 ```
+
+_you need to provide a configFile to the container at:/app/config.json_
 
 You should see some logs matching: `[URL]: [Status Code] - [Request Time]`. Followed by a break down of the total request time. Example:
 
