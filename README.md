@@ -6,7 +6,7 @@ http_monitor takes a path to a config file as the first argument, it proceeds to
 
 ### Async processing
 
-Go routines allows for the monitor keep track of every provided url in the provided intervals, without beeing influenced by bad endpoints taking too long to respond.
+Go routines allows for the monitor keep track of every provided url in the provided intervals, without being influenced by bad endpoints taking too long to respond.
 
 - `time.AfterFunc`: AfterFunc creates it's own go-routine after the provided time has passed, without holding up any processing, or beeing held up itself.
 
